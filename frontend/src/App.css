@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #fefefe;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ec4899, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #db2777, #7c3aed);
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  border: 2px solid #e5e7eb;
+  color: #374151;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #ec4899;
+  color: #ec4899;
+  transform: translateY(-1px);
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Form styles */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Calendar specific styles */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calendar-day {
+  background: white;
+  padding: 16px 8px;
+  min-height: 120px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.calendar-day:hover {
+  background: #f9fafb;
+}
+
+.calendar-day.today {
+  background: linear-gradient(135deg, #fef3c7, #fed7aa);
+}
+
+.calendar-day.other-month {
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+.appointment-slot {
+  background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+  border: 1px solid #3b82f6;
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin: 2px 0;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.appointment-slot:hover {
+  background: linear-gradient(135deg, #bfdbfe, #c7d2fe);
+  transform: scale(1.02);
+}
+
+/* Service category colors */
+.service-facial {
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.service-laser-removal {
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+.service-teeth-whitening {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .calendar-grid {
+    gap: 0;
+  }
+  
+  .calendar-day {
+    min-height: 80px;
+    padding: 8px 4px;
+  }
+  
+  .appointment-slot {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.loading-spinner.lg {
+  width: 40px;
+  height: 40px;
+  border-width: 4px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-scheduled {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-confirmed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hover effects for interactive elements */
+.interactive:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Focus styles for accessibility */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Dark mode support (for future implementation) */
+@media (prefers-color-scheme: dark) {
+  /* Dark mode styles would go here */
+}
